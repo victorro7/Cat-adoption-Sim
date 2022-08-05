@@ -1,0 +1,6 @@
+Your pet has rolled around in mud
+Your pet has eaten something foul and thrown up on themselves
+You've recently taken your pet to the vet and they haven't eaten in a while
+You've been gone a while! Your pet is bored!
+A wild animal stole your pet's food! Now they have nothing to eat!
+Your pet is so bored that they got tired of sleeping!

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cat Breeds</title>
+  <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- Bulma Version 0.9.0-->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="hero.css">
+  <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!--Header + Navbar-->
+  <section class="hero is-info is-medium is-bold">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="../">
+              <img src="imgs/logo.png" alt="Logo">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <div class="tabs is-right">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li class="is-active"><a href="breeds.html">Cat Breeds</a></li>
+                  <li><a href="petCare.html">Pet Care</a></li>
+                </ul>
+                <span class="navbar-item">
+                  <a class="button is-white is-outlined" href="simulation.html">
+                    <span class="icon">
+                      <img src="imgs/icon.png" alt="icon">
+                    </span>
+                    <span title="Hello from the other side">Play</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 mb-2">
+          Cat Breeds
+        </h1>
+        <h2 class="subtitle is-4 mt-6">
+          All the little angels you could possibly wish to adopt!
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!--End Header + Navbar-->
+
+  <!-- Drop Down menu -->
+  <div class="columns">
+    <select onchange="showBreed(value)" name="breed_selector" id="breed_selector"
+      class="select is-fullwidth center is-medium">
+    </select>
+  </div>
+  <!-- End Drop Down menu -->
+
+  <!--Content for breed-->
+  <section class="section">
+    <div class="columns box is-multiline js-modal-trigger" id="breed_info" data-target="modal-breed-info">
+
+      <div class="column is-half">
+        <img id="breed_image" class="image center" src="">
+      </div>
+
+      <div class="column is-half has-text-centered">
+        <div class="is-size-1" id="breed_name"></div>
+        <div class="is-size-5" id="breed_years"></div>
+        <div id="breed_json"></div>
+
+        <div class="column ml-5">
+          <a id="learn_more" target="_blank" class="button is-normal mt-5">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!--Star ratings-->
+    <div class="columns is-8 box is-multiline" style="gap: 2rem;" 
+      id="breed_stars">
+
+      <div class="column" style="flex-basis: auto;">
+        Adaptability
+        <div class="column ml-1 mt-1" id="adaptability">
+          <!--Stars go here(from JS)-->
+        </div>
+      </div>
+
+      <div class="column" style="flex-basis: auto;">
+        Affection Level
+        <div class="column ml-1 mt-1" id="affection_level">
+          <!--Stars go here(from JS)-->
+        </div>
+      </div>
+
+      <div class="column" style="flex-basis: auto;">
+        Child Friendly
+        <div class="column ml-1 mt-1" id="child_friendly">
+          <!--Stars go here(from JS)-->
+        </div>
+      </div>
+
+      <div class="column" style="flex-basis: auto;">
+        Dog Friendly
+        <div class="column ml-1 mt-1" id="dog_friendly">
+          <!--Stars go here(from JS)-->
+        </div>
+      </div>
+
+      <div class="column" style="flex-basis: auto;">
+        Energy Level
+        <div class="column ml-1 mt-1" id="energy_level">
+          <!--Stars go here(from JS)-->
+        </div>
+      </div>
+
+      <div class="column" style="flex-basis: auto;">
+        Grooming
+        <div class="column ml-1 mt-1" id="grooming">
+          <!--Stars go here(from JS)-->
+        </div>
+      </div>
+
+      <div class="column" style="flex-basis: auto;">
+        Health Issues
+        <div class="column ml-1 mt-1" id="health_issues">
+          <!--Stars go here(from JS)-->
+        </div>
+      </div>
+
+      <div class="column" style="flex-basis: auto;">
+        Intelligence
+        <div class="column ml-1 mt-1" id="intelligence">
+        </div>
+      </div>
+
+      <div class="column" style="flex-basis: auto;">
+        Shedding Level
+        <div class="column ml-1 mt-1" id="shedding_level">
+          <!--Stars go here(from JS)-->
+        </div>
+      </div>
+
+      <div class="column" style="flex-basis: auto;">
+        Social Needs
+        <div class="column ml-1 mt-1" id="social_needs">
+          <!--Stars go here(from JS)-->
+        </div>
+      </div>
+
+      <div class="column" style="flex-basis: auto;">
+        Stranger Friendly
+        <div class="column ml-1 mt-1" id="stranger_friendly">
+          <!--Stars go here(from JS)-->
+        </div>
+      </div>
+
+      <div class="column" style="flex-basis: auto;">
+        Vocalisation
+        <div class="column ml-1 mt-1" id="vocalisation">
+          <!--Stars go here(from JS)-->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End of Content-->
+
+  <!-- Breed Carousel -->
+  <section class="section">
+    <div>
+      <!--Breed + icons -->
+      <div class="columns is-mobile is-vcentered">
+        <div class="column is-10 is-size-2 mt-6 ml-6">
+          <div id="breed_nameSwiper"></div>
+        </div>
+
+        <div class="column is-mobile">
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="navbar-item ml-6 mt-6">
+                <img src="imgs/lefticon.png" id="lefticon">
+              </a>
+            </p>
+
+            <p class="control">
+              <a class="navbar-item mt-6">
+                <img src="imgs/righticon.png" id="righticon">
+              </a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Swiper for Breed Images -->
+    <section class="swiper breed section">
+
+      <div class="swiper-wrapper columns mt-5" id="breed_carousel">
+        <!--Images go here(from javascript) -->
+      </div>
+
+    </section>
+
+  </section>
+  <!--End Carousel-->
+
+  <!--Simulation Button -->
+  <div class="container has-text-centered mb-6">
+    <button class="button is-large is-black is-outlined" id="addbreed">Adopt this cat</button>
+  </div>
+  <!--End Simulation Button -->
+
+  <!--Adopted Message-->
+  <div id="snackbar">Cat Adopted!</div>
+  <!--End Adopted Message-->
+
+  <!--Breed Modal -->
+  <section class="breed_modal">
+    <div id="modal-breed-info" class="modal">
+      <div class="modal-background"></div>
+
+      <div class="modal-content">
+        <div class="box">
+          <div class="has-text-centered is-size-5">
+            <div class="is-size-1" id="breed_nameModal"></div>
+            <div>
+              <img id="breed_imageModal" class="image center mt-5" src="">
+            </div>
+
+            <div class="mt-5" id="breed_description"></div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+  </section>
+  <!--End Modal -->
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="breedsJS.js"></script>
+
+  <!--Footer-->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>All About Cats</strong> by Victor Osunji, Olena Bromell, Wendy Zheng, Abdulgani Muhammedsani.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

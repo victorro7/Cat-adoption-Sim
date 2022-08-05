@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+  <title>Pet Simulation</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- Bulma Version 0.9.0-->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="hero.css">
+  <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+  <section class="hero is-info is-medium is-bold">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="../">
+              <img src="imgs/logo.png" alt="Logo">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <div class="tabs is-right">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="breeds.html">Cat Breeds</a></li>
+                  <li><a href="petCare.html">Pet Care</a></li>
+                </ul>
+                <span class="navbar-item">
+                  <a class="button is-white is-outlined" href="simulation.html">
+                    <span class="icon">
+                      <img src="imgs/icon.png" alt="icon">
+                    </span>
+                    <span title="Hello from the other side">Play</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1">
+          Simulation
+        </h1>
+        <h2 class="subtitle is-4">
+          All the little angels you could possibly wish to adopt!
+        </h2>
+      </div>
+    </div>
+  </section>
+  <div class="box cta petAlert has-background-warning">
+    <p class="has-text-centered">
+      First adopt a cat under <u><a href="breeds.html"> Cat Breeds</a></u>
+    </p>
+  </div>
+<br> <!--   <br> -->
+  <section id="simHold" class="container">
+    <div id="sim">
+      <img id="catimg" class="simImg"
+        src="https://www.nomadfoods.com/wp-content/uploads/2018/08/placeholder-1-e1533569576673-960x960.png"
+        alt="Placeholder Image" />
+      <!-- Buttons -->
+      <div id="simInteraction" class="buttons are-medium">
+        <button id="playButton" class="button" disabled>
+          Play
+        </button>
+        <button id="feedButton" class="button" disabled>
+          Feed
+        </button>
+        <button id="cleanButton" class="button" disabled>
+          Clean
+        </button>
+      </div>
+      <div id="textBox" class="box">
+
+      </div>
+    </div>
+  </section>
+
+  <!--   Progress bars -->
+  <div id="progressBars" class="column mt-4 ml-6">
+    <div class="column" id="status">
+      <p id="progressLabeler" class="is-size-6" style="width: 90px;">Satisfaction</p>
+      <progress id="playProgress" class="progress is-info is-small is-gray mt-1" value="50" max="100"
+        style="width: 320px;"></progress>
+    </div>
+    <div class="column" id="status">
+      <p class="is-size-6" style="width: 90px;">Hungriness</p>
+      <progress id="feedProgress" class="progress is-info is-small mt-1" value="50" max="100"
+        style="width: 320px;"></progress>
+    </div>
+    <div class="column" id="status">
+      <p class="is-size-6" style="width: 90px;">Dirtiness</p>
+      <progress id="cleanProgress" class="progress is-info is-small mt-1" value="50" max="100"
+        style="width: 320px;"></progress>
+    </div>
+  </div>
+
+  </section>
+
+  <section id="adoptMore" class="section"></section>
+
+  <script src="script.js"></script>
+
+  <!--Footer-->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>All About Cats</strong> by Victor Osunji, Olena Bromell, Wendy Zheng, Abdulgani Muhammedsani.
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
